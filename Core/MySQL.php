@@ -5,11 +5,11 @@ class MySQL{
 
 	private $connection = null;
 
-	public $status = fales;
+	public $status = false;
 	public $erorMessage = null;
 
 	public function __construct(){
-		$this->createConnection()
+		$this->createConnection();
 	}
 	private function createConnection(){
 		$this->connection = new mysqli($this->HOSTNAME, $this->USERNAME, $this->PASSWORD, $this->DBNAME, $this->PORT);
@@ -27,6 +27,9 @@ class MySQL{
 		if ($this->connection){
 			$this->connection->close();
 		}
+	}
+	public function getConnection(){
+		return $this->connection;
 	}
 }
 

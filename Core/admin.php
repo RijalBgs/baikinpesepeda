@@ -1,18 +1,27 @@
 <?php
 
-require __DIR__ . "/../Core/ControlllerDB.php";
+require __DIR__ . "/ControllerDB.php";
 
-class admin extends ControlllerDB
-{
+class adminService extends ControllerDB {
+
+    public function validateUsername ($username){
+        $stmt = $this->connection->prepare("SELECT * FROM 'admin' WHERE 'username' VALUES (?)");
+        $stmt->bind_param("s",$username);
+        $stmt->execute;
+        return $stmt->result();
+    
+    }
+    
+
     public function insert($admin)
     {
-        $stmt = $this->connection->prepare("INSERT INTO `admin` (`username`, `password`, `email`) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt = $this->connection->prepare("INSERT INTO `admin` (`username`, `password`, `email`) VALUES (?, ?, ?)");
         
         $username = $admin->getUsername();
         $password = $admin->getPassword();
         $email = $admin->getEmail();
         
-        $stmt->bind_param(1234567, $admin->username, $admin->password, $admin->email);
+        $stmt->bind_param("sss",$username, $password, $email);
 
         $process = $stmt->execute();
 
@@ -29,16 +38,18 @@ class admin extends ControlllerDB
     }
 }
 
-require __DIR__ . "/../Models/UserModel.php";
-    $admin = new Admin();
+require __DIR__ . "/../Models/adminModel.php";
+    $admin = new adminModel();
     $admin->setUsername("miles morales");
     $admin->setPassword("spiderman");
     $admin->setEmail("miles_morales@marvel.com");
 
-    $process = admin::insert($admin);
+    $service = new adminService;
+
+    $process = $service->insert($admin);
 
     if ($process) {
-        print_r("Process Successfull");
+        echo "Process Successfull";
     } else {
-        print_r("Process Failed");
+        echo "Process Failed";
     }

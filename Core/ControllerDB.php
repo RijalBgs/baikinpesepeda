@@ -7,6 +7,6 @@ class ControllerDB {
 
 	public function __construct() {
 		$mysql = new MySQL();
-		$this->connection = $mysql->connection;
+		$this->connection = $mysql->getConnection();
 	}
 }
