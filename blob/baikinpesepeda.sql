@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Jan 2021 pada 16.12
--- Versi server: 10.4.14-MariaDB
--- Versi PHP: 7.3.22
+-- Generation Time: Jan 07, 2021 at 05:54 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -37,7 +37,7 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `leaderboard`
+-- Table structure for table `leaderboard`
 --
 
 CREATE TABLE `leaderboard` (
@@ -46,7 +46,7 @@ CREATE TABLE `leaderboard` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `leaderboard`
+-- Dumping data for table `leaderboard`
 --
 
 INSERT INTO `leaderboard` (`username`, `point`) VALUES
@@ -56,7 +56,7 @@ INSERT INTO `leaderboard` (`username`, `point`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -67,11 +67,14 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`username`, `name`, `password`, `email`) VALUES
+('james12', 'James Bond', '25d55ad283aa400af464c76d713c07ad', 'james@gmail.com'),
 ('Pancanaka_Bima', 'Bima Pancanaka', '12344321', 'pancanakabima@gmail.com'),
+('Peter', 'Peter Parker', 'e9aada4fd797d65069187d7a961691cc', 'peterparker@gmail.com'),
+('seped_a', 'JokoOo', '25d55ad283aa400af464c76d713c07ad', 'sepeda@gmail.com'),
 ('zack22', 'Zacky Prakoso', '12344321', 'zack22@gmail.com');
 
 --
@@ -79,29 +82,29 @@ INSERT INTO `user` (`username`, `name`, `password`, `email`) VALUES
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`username`);
 
 --
--- Indeks untuk tabel `leaderboard`
+-- Indexes for table `leaderboard`
 --
 ALTER TABLE `leaderboard`
   ADD KEY `username` (`username`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`username`);
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `leaderboard`
+-- Constraints for table `leaderboard`
 --
 ALTER TABLE `leaderboard`
   ADD CONSTRAINT `leaderboard_ibfk_1` FOREIGN KEY (`username`) REFERENCES `user` (`username`);
