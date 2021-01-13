@@ -25,11 +25,15 @@ class LoginController extends UserService{
 	
 	public function Login(){
 		$row = $this->SQLLogin($this->username, $this->password)->FetchArray();
-		if($row && ($row['username'] == $this->username || $row['password'] == md5($this->password))){
+		if($row['role']=='user' && ($row['username'] == $this->username || $row['password'] == md5($this->password))){
 			$_SESSION['username'] = $row['username'];
 			$_SESSION['password'] = $row['password'];
-			header('location:administrator.php');
-			}else{
+			header('location:user.php');
+			}
+			elseif ($row['role']=='admin'){
+				header('location:administrator.php');
+			}
+			else{
 			$this->message = "Incorrect Username and Password";
 			return $this->message;
 			header('location:login.php');
