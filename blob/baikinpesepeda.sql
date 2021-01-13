@@ -3,15 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Jan 07, 2021 at 05:54 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
-=======
 -- Generation Time: Jan 13, 2021 at 05:57 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.3.22
->>>>>>> main
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,18 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
-<<<<<<< HEAD
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `username` varchar(20) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-=======
 -- Table structure for table `comment`
 --
 
@@ -65,7 +47,6 @@ INSERT INTO `comment` (`id_comment`, `id_post`, `username`, `date`, `comment`) V
 (38, 4, 'peterNewYorkMania', '2021-01-13 21:59:40', 'Porong juga bagus boss, aspalnya baruu'),
 (39, 10, 'dhanhafid', '2021-01-13 22:21:07', 'Tinggal kencengin aja locknut di hub nya, asal ada kunci pas bisa dibenerin sendiri kok');
 
->>>>>>> main
 -- --------------------------------------------------------
 
 --
@@ -82,10 +63,6 @@ CREATE TABLE `leaderboard` (
 --
 
 INSERT INTO `leaderboard` (`username`, `point`) VALUES
-<<<<<<< HEAD
-('zack22', 87),
-('Pancanaka_Bima', 120);
-=======
 ('paijoo', 60),
 ('dhanhafid', 257);
 
@@ -113,42 +90,22 @@ INSERT INTO `post` (`id_post`, `username`, `date`, `headlight`, `content`) VALUE
 (4, 'dhanhafid', '2021-01-13 14:12:47', 'Rekomendasi tujuan gowes minggu pagi', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In at sagittis nisi, eu fermentum ipsum. Vestibulum porta consequat tortor. Duis sodales tempus imperdiet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer imperdiet vitae orci eu semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquam consequat consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\r\n\r\nCras eu gravida enim. Integer sodales, purus a varius laoreet, sapien ligula dapibus ligula, at sodales lectus velit ut leo. Aenean iaculis tortor ac lacus aliquam sollicitudin. Proin consectetur convallis nulla eu pretium. Maecenas ac eros elementum, commodo velit ut, interdum lectus. Proin eu congue augue. Maecenas consectetur neque justo, in volutpat enim consequat quis.\r\n\r\nFusce iaculis vehicula est non mattis. Aliquam eget nisi tortor. Sed egestas vestibulum nisl, nec aliquam purus rutrum dignissim. Curabitur tristique id nulla nec eleifend. Nullam id magna elementum, facilisis purus nec, vehicula velit. Duis malesuada imperdiet scelerisque. Aliquam vulputate erat efficitur, imperdiet augue nec, aliquam erat. Integer mollis massa a risus tempus, non finibus eros maximus. Fusce at ante vel eros suscipit cursus. Duis auctor a massa gravida mattis. Fusce placerat dictum aliquam. Cras hendrerit, turpis eget accumsan ultrices, nulla quam bibendum ligula, vitae tempus odio libero non velit. Donec dapibus mattis tristique.'),
 (9, 'peterNewYorkMania', '2021-01-13 22:15:19', 'Bersepeda yang aman disaat pandemi', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in pretium metus. Suspendisse faucibus gravida est non sodales. Phasellus congue, nunc eu luctus cursus, metus eros porta nibh, vel luctus mi libero vitae ligula. Sed massa augue, convallis vel augue porttitor, accumsan fermentum ligula. Morbi placerat, odio at dictum consectetur, urna risus accumsan leo, non tempor massa elit sed lectus. Donec convallis interdum ligula, sit amet pretium risus venenatis a. Fusce odio lectus, euismod eget vehicula vitae, consequat sit amet nibh. Pellentesque in elit mi. Ut tempor faucibus tortor, et efficitur leo sodales vitae. Sed consectetur, turpis ac tristique interdum, enim sapien mollis elit, eget eleifend elit est quis urna. Cras finibus dui in urna finibus rutrum. Vivamus quis condimentum odio. Suspendisse sit amet posuere dui, nec posuere justo. Fusce ullamcorper, tortor ac convallis rhoncus, diam arcu pretium velit, at egestas tellus magna at felis.\r\n\r\nNulla a est rhoncus, placerat purus id, fermentum diam. Suspendisse malesuada mi in ante consectetur ultrices nec eu neque. Proin laoreet pulvinar dui vitae malesuada. Ut sit amet lorem vel ipsum aliquet tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam luctus et mauris eget placerat. Nullam ac augue ut sapien vehicula hendrerit. Nullam id lacinia ipsum. Sed sed ipsum fermentum, condimentum tortor nec, lobortis enim. Maecenas id dui ligula. Etiam ut aliquet ipsum, et lacinia nulla. Mauris at semper nisi. Sed fermentum massa dui, in consectetur tortor ornare vitae. Proin scelerisque ornare iaculis.\r\n\r\nVestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin lacinia, enim nec dapibus pellentesque, orci tellus fermentum elit, in faucibus neque eros eget risus. Nullam egestas sem rutrum metus euismod, ac porta tellus rhoncus. Quisque pellentesque nunc ac dolor mollis, vestibulum consectetur dui consectetur. Duis sit amet orci faucibus, ornare nunc ut, commodo elit. Integer tempor hendrerit turpis tempus posuere. Suspendisse potenti. Donec nec tortor at lorem porttitor posuere. Integer quis massa facilisis mauris rhoncus consectetur. Praesent nulla leo, mollis a tincidunt eget, tincidunt et libero. Integer bibendum consequat efficitur. Vivamus quis vulputate nibh. Vivamus consectetur, magna sed consectetur egestas, dui dui accumsan neque, et molestie ipsum metus in dolor.'),
 (10, '46radya', '2021-01-13 22:19:14', '#tanya roda', 'Permisi om sebelumnya,\r\n\r\nBelakangan ini roda belakang saya kerasa goyang,\r\nMasalahnya kira kira dimananya ya om ?, kalau misal benerin sendiri bisa nggak atau harus bawa ke bengkel ?\r\n\r\n');
->>>>>>> main
 
 -- --------------------------------------------------------
 
 --
-<<<<<<< HEAD
--- Table structure for table `user`
---
-
-CREATE TABLE `user` (
-  `username` varchar(20) NOT NULL,
-=======
 -- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
   `username` varchar(20) NOT NULL,
   `role` tinytext NOT NULL DEFAULT 'user',
->>>>>>> main
   `name` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
-<<<<<<< HEAD
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`username`, `name`, `password`, `email`) VALUES
-('james12', 'James Bond', '25d55ad283aa400af464c76d713c07ad', 'james@gmail.com'),
-('Pancanaka_Bima', 'Bima Pancanaka', '12344321', 'pancanakabima@gmail.com'),
-('Peter', 'Peter Parker', 'e9aada4fd797d65069187d7a961691cc', 'peterparker@gmail.com'),
-('seped_a', 'JokoOo', '25d55ad283aa400af464c76d713c07ad', 'sepeda@gmail.com'),
-('zack22', 'Zacky Prakoso', '12344321', 'zack22@gmail.com');
-=======
 -- Dumping data for table `users`
 --
 
@@ -161,26 +118,18 @@ INSERT INTO `users` (`username`, `role`, `name`, `password`, `email`) VALUES
 ('Pancanaka_Bima44', 'user', 'Bima Pancanaka', '00a1f187721c63501356bf791e69382c', 'pancanakabima@gmail.com'),
 ('peterNewYorkMania', 'admin', 'Peter Parker', '00a1f187721c63501356bf791e69382c', 'peter@marvel.com'),
 ('zack22', 'user', 'Zacky Prakoso', '00a1f187721c63501356bf791e69382c', 'zack22@gmail.com');
->>>>>>> main
 
 --
 -- Indexes for dumped tables
 --
 
 --
-<<<<<<< HEAD
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`username`);
-=======
 -- Indexes for table `comment`
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`id_comment`),
   ADD KEY `username` (`username`),
   ADD KEY `id_post` (`id_post`);
->>>>>>> main
 
 --
 -- Indexes for table `leaderboard`
@@ -189,14 +138,6 @@ ALTER TABLE `leaderboard`
   ADD KEY `username` (`username`);
 
 --
-<<<<<<< HEAD
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`username`);
-
---
-=======
 -- Indexes for table `post`
 --
 ALTER TABLE `post`
@@ -226,17 +167,10 @@ ALTER TABLE `post`
   MODIFY `id_post` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
->>>>>>> main
 -- Constraints for dumped tables
 --
 
 --
-<<<<<<< HEAD
--- Constraints for table `leaderboard`
---
-ALTER TABLE `leaderboard`
-  ADD CONSTRAINT `leaderboard_ibfk_1` FOREIGN KEY (`username`) REFERENCES `user` (`username`);
-=======
 -- Constraints for table `comment`
 --
 ALTER TABLE `comment`
@@ -254,7 +188,6 @@ ALTER TABLE `leaderboard`
 --
 ALTER TABLE `post`
   ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`username`) REFERENCES `users` (`username`);
->>>>>>> main
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
